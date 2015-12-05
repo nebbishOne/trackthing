@@ -1,0 +1,21 @@
+<div class="span12">
+    <form>
+        <input 
+            class="input-medium"  
+            ng-model="newTrip.tripname" 
+            ng-init="newTrip.tripname = ''"
+            type="text"
+            placeholder="Name of new Trip"
+        >
+            
+        <select
+            ng-model="newTrip.triptypeid"
+            ng-init="newTrip.triptypeid = 1"
+            ng-options="triptype.id as triptype.triptypename for triptype in triptypes"
+        ></select>
+        
+        <button ng-class="newTrip.tripname.length > 0 && 'btn btn-success' || 'btn'" ng-click="newTrip.tripname.length > 0 && createTrip(newTrip)">Create</button>
+    </form>
+</div>
+
+<div class="gridStyle" ng-grid="tripsGridOptions"></div>

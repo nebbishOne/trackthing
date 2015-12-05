@@ -1,0 +1,6 @@
+<select 
+    class="form-control" 
+    ng-model="row.entity.id" 
+    ng-options="triptype.id as triptype.triptypename for triptype in triptypes"
+    ng-blur="stopEditingTagHeading()">
+</select>

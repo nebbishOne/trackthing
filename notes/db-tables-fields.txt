@@ -1,0 +1,11 @@
+
+trips:
+id                  INT PK
+trip_name           TEXT
+trip_dist           TEXT
+trip_time           TEXT
+trip_type           (FK) INT
+
+trip_types:
+id                  INT PK
+trip_type_name      TEXT
